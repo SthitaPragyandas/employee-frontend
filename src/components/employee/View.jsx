@@ -8,7 +8,7 @@ const View = () => {
     useEffect(() => {
         const fetchEmployee = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/employee/${id}`, {
+                const response = await axios.get(`https://employee-api-khaki-nine.vercel.app/employee/${id}`, {
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`
                     }
@@ -31,7 +31,7 @@ const View = () => {
                 <h2 className="text-2xl font-bold mb-8 text-center">Employee Details</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <img src={`http://localhost:5000/${employee.userId.profileImage}`} className="rounded-full border w-72" />
+                        <img src={`https://employee-api-khaki-nine.vercel.app/${employee.userId.profileImage}`} className="rounded-full border w-72" />
                     </div>
                     <div>
                         <div className="flex space-x-3 mb-5">
