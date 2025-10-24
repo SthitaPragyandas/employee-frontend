@@ -51,7 +51,7 @@ const List = () => {
 
     const handleFilter = (e) => {
         const records = employees.filter((emp) => {
-            return emp.name.toLowerCase().includes(e.target.value.toLowerCase());
+            return emp.employeeId.toLowerCase().includes(e.target.value.toLowerCase());
         });
         setFilteredEmployee(records)
     }
@@ -63,7 +63,7 @@ const List = () => {
                 <h3 className="text-2xl font-bold">Manage Employees</h3>
             </div>
             <div className="flex justify-between items-center">
-                <input type="text" placeholder="Search By Dept Name" className="px-4 py-0.5 border rounded" onChange={handleFilter} />
+                <input type="text" placeholder="Search By Emp Id" className="px-4 py-0.5 border rounded" onChange={handleFilter} />
                 <Link to="/admin-dashboard/add-employee" className="px-4 py-1 bg-teal-600 rounded text-white">Add New Employee</Link>
             </div>
             <div className="mt-6">

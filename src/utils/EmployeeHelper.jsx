@@ -30,7 +30,7 @@ export const columns = () => [
         width: "120px"
     },
     {
-        name: "DOB",
+        name: "Joining Date",
         selector: (row) => row.dob,
         sortable: true,
         width: "130px"
